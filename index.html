@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("https://wallpapercave.com/wp/wp3194653.jpg");
+        }
+
+        article{
+            border-width: 4px!important
+        }
+    </style>
+   <div class="container my-5">    
+       <h1 class="text-center text-warning">Estudiantes y Profesores</h1>
+            <form class="mx-3">
+                <input 
+                type="text"
+                class="form-control mb-3"
+                name="nombre"
+                value="Junior Andres Gonzalez"
+                required
+                >
+
+                <input 
+                type="number"
+                class="form-control mb-2"
+                name="edad"
+                value="25"
+                required
+                >
+
+                <select class="form-select my-3" aria-label="Default select example" name="opcion">
+                    <option value="Estudiante" selected>Estudiante</option>
+                    <option value="Profesor">Profesor</option>
+                </select>
+
+                <button class="btn btn-primary" type="submit">Agregar</button>
+            </form>
+
+            <section class="row my-3">
+                <div class="col-6" id="student-container">
+                    
+                </div>
+                <div class="col-6" id="teacher-container">
+                
+                    </article>
+                </div>
+            </section>
+    </div>
+
+    <template id="template-student">
+        <article class="card mb-2">
+            <div class="card-body">
+                <h5>
+                    <span class="text-primary">Nombre Estudiante</span>
+                    <span class="badge bg-success" id="esta">Aprobado</span>
+                </h5>
+                <h6>Estudiante</h6>
+                <p class="lead">Edad</p>
+                <button class="btn btn-success aprobar" id="aprobar">Aprobar</button>
+                <button class="btn btn-danger">Reprobar</button>
+            </div>
+        </article>
+
+    </template>
+
+    <template id="template-profe">
+        <article class="card bg-dark text-white mb-2 border-warning">
+            <div class="card-body">
+                <h5>Nombre</h5>
+                <h6>Profesor</h6>
+                <p class="lead">Edad</p>
+            </div>
+    </template>
+
+
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
